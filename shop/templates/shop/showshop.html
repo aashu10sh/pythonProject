@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop </title>
+</head>
+<body>
+<h1>This is Shop List.</h1>
+<div>
+    {% for shop_item in shop %}
+    <ul>
+        <h3>Shop Info</h3>
+        <li>Name: {{ shop_item.shop_name }}</li>
+        <li>Contact : {{ shop_item.contact }} </li>
+        <li>Location : {{ shop_item.location }}</li>
+        <li>Category : {{ shop_item.category}} </li>
+        <li>Contact Person : {{ shop_item.contact_person }} </li>
+        <li>Email : {{ shop_item.email }} </li>
+        <li><img src="{{ shop_item.image }}"> </li>
+    </ul>
+    {% endfor %}
+</div>
+
+</body>
+</html>

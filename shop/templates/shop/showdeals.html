@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop </title>
+</head>
+<body>
+<h1>This is Deal Info.</h1>
+<div>
+    {% for deal in deals %}
+    <ul>
+        <h3>Deal Info</h3>
+        <li>Name: {{ deal.deal_name }}</li>
+        <li>Valid From : {{ deal.valid_from }} </li>
+        <li>Valid Till : {{ deal.valid_till }}</li>
+        <li>Discount % : {{ deal.discount_percent }} </li>
+        <li>Done By : {{ deal.done_by }} </li>
+    </ul>
+    {% endfor %}
+</div>
+
+</body>
+</html>

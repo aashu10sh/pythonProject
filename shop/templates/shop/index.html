@@ -1,15 +1,22 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
-</head>
+</head> -->
+{% extends 'shop/base.html' %}
+{% block content%}
+<h2>INSIDE BLOCK</h2>
+
 <body>
+
     <h2>Shops</h2>
     {% for shop in shops %}
-        <ul>
+ 
+  
+    <ul>
             <li>{{ shop.shop_name }}</li>
             <li>{{ shop.contact }}</li>
             <li>{{ shop.location }}</li>
@@ -38,5 +45,7 @@
             <li>{{ deal.done_by.shop_name }}</li>
         </ul>
     {% endfor %}
+    <a href="{% url 'product_list' %}">Product List</a>
 </body>
+{% endblock %}
 </html>

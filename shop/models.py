@@ -2,6 +2,13 @@
 # Create your models here.
 from django.db import models
 
+from django.contrib.auth.models import AbstractUser
+
+class CustomUser(AbstractUser):
+    id_admin = models.BooleanField('Admin',default=False)
+    is_shop = models.BooleanField('Shop',default=False)
+    is_customer = models.BooleanField('Customer',default=False)
+
 
 class Shop(models.Model):
     shop_name = models.CharField(max_length=255)

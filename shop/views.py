@@ -14,3 +14,29 @@ def index(req):
         "deals" : deals
     }
     return render(req, "shop/index.html", context)
+
+
+def product_list(request): 
+    product_list = Product.objects.all()
+    context ={
+        'products':product_list
+    }
+    return render(request, 'shop/showproducts.html',context)
+
+def shop_list(request):
+
+    shop_list = Shop.objects.all()
+    context = {
+        'shop':shop_list
+    }
+    return render(request,'shop/showshop.html',context)
+
+def main(request):
+    return render(request,'shop/main.html')
+
+def deal_list(request):
+    deals = Deal.objects.all()
+    context = {
+        'deals':deals
+    }
+    return render(request,'shop/showdeals.html',context)
