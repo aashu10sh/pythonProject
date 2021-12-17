@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product View</title>
+</head>
+<body>
+<div>
+    <form action="{%  url 'product_data' %}" method="POST"> {% csrf_token %}
+        <label>Name</label>
+        <input name="name" placeholder="Name" type="text">
+        <br>
+        <label> Roll Number </label>
+        <input name="rollnumber" placeholder="Roll Number" type="int">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+</div>
+</body>
+</html>
